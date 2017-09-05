@@ -1,49 +1,141 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700');
 
 body {
 	margin: 0;
-	padding: 120px 0 0 0;
-	background: #f9f9f9;
+	padding: 0;
+	background: #333;
 }
 
-.top-bar {
+.home {
 	display: flex;
-	background: #fff;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 80px;
-	box-shadow: 0 8px 17px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.2);
+	flex-direction: column;
+}
 
-	.logo {
-		position: absolute;
-		top: -5px;
+section {
+	display: flex;
+	height: 80vh;
+
+}
+
+article {
+	width: 33%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1;
+
+	img {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.trama-1::before,
+.trama-2::before,
+.trama-3::before {
+	content: "";
+	width: 33%;
+	height: 80vh;
+	top: 0;
+	right: 0;
+	position: absolute;
+	display: inline-block;
+	background-size: 160px;
+	opacity: 0.05;
+	z-index: 0;
+	left: 0;
+	//border: 1px solid #ddd;
+}
+
+.trama-1 {
+	
+	a {
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		align-items: center;
+		justify-content: center;
+	}
+	
+
+	b {
+		position: relative;
+		font-size: 17px;
+		color: #fff;
+		z-index: 1;
+		font-family: 'Alegreya Sans SC', cursive;
 	}
 
-	nav {
-		font-family: 'Alegreya Sans SC', sans-serif;
-		flex: 1;
-		text-align: right;
+}
 
-		a {
-			margin: 0 15px;
-			text-decoration: none;
-			border-bottom: 2px solid transparent;
-			color: #157A40;
-			padding: 10px 0;
-			font-size: 20px;
+.trama-1::before {
+	background-image: url(https://ama-trama.github.io/germinacion-del-camino/img/back-search.jpg);
+	left: 0;
+	opacity: .9;
+	background-position: top center;
+	background-size: 500%;
+	width: 33%;
+	overflow: hidden;
+}
 
-			&.active {
-				border-bottom: 2px solid #157A40;
-			}
+
+.trama-2::before {
+	background-image: url(https://ama-trama.github.io/uni/assets/back-trama-shipi.svg);
+	width: 100%;
+}
+
+
+.trama-2 {
+	background: linear-gradient(314deg, #efd510, #25a55f, #951556, #e84545, #f2910a, #283996);
+	background-size: 1200% 1200%;
+
+	-webkit-animation: AnimationName 16s ease infinite;
+	-moz-animation: AnimationName 16s ease infinite;
+	animation: AnimationName 16s ease infinite;
+
+	@-webkit-keyframes AnimationName {
+	    0%{background-position:0% 31%}
+	    50%{background-position:100% 70%}
+	    100%{background-position:0% 31%}
+	}
+	@-moz-keyframes AnimationName {
+	    0%{background-position:0% 31%}
+	    50%{background-position:100% 70%}
+	    100%{background-position:0% 31%}
+	}
+	@keyframes AnimationName { 
+	    0%{background-position:0% 31%}
+	    50%{background-position:100% 70%}
+	    100%{background-position:0% 31%}
+	}
+}
+
+.trama-3 {
+	background: #333;
+}
+
+footer {
+	width: 100%;
+	height: 20vh;
+	text-align: center;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	b {
+		font-size: 43px;
+		text-transform: uppercase;
+		margin-left: 15px;
+		font-family: 'Amatic SC', cursive;
+		color: #e84545;
+
+		span {
+			color: #f2910a;
 		}
 	}
 
-}
-
-.main-container {
-	max-width: 900px;
-	margin: 0 auto;
 }
